@@ -1,0 +1,167 @@
+	     body{
+	     	font: 14px  arial 'Micorsoft YaHei';
+	     	margin: 0;
+	     	padding: 0;
+	     	background: #eee;
+	     }
+	     /*通用样式radio button*/
+	     input[type='radio']{
+            background-color: #fff;
+            -webkit-appearance:none;
+            border-radius:10px;
+            cursor:pointer;
+            display:inline-block;
+            width:15px;
+            height:15px;
+            position: relative;
+            border:1px solid rgba(211,211,211,0.8);
+            box-sizing: content-box;
+        }
+        input[type='radio']:checked:after{
+            background-color:#1abc9c;
+            border-radius:50%;
+            content: '';
+            display: block;
+            height: 7px;
+            left: 4px;
+            position: relative;
+            top: 4px;
+            width: 7px;
+        }
+        .fixed{
+        	width: 50px;
+        	height: 50px;
+        	border-radius: 50%;
+        	background-color:rgba(122,231,12,0.5);
+        	position: fixed;
+        	top: 20px;
+        	left: 10px;
+        	z-index: 1000;
+        }
+		.contain{
+			margin:20px auto;
+			width: 76%;
+			border: 1px solid black;
+			background: #fff;
+			border-radius: 5px;
+		}
+		.header{
+			border: 1px solid black;
+			background: #3D444C;
+			padding: 30px 50px;
+		}
+		.header .progressbar{
+           width: 70%;
+           height: 20px;
+           border-radius: 5px;
+           background: #eee;
+           display: inline-block;
+		}
+		.progressbar>div{
+			background: #1abc9c;
+			width: 0%;
+			height: 100%;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+			transition: all 1s ease-in-out;
+		}
+		.time{
+			font-size: 20px;
+			color: #fff;
+            display: inline-block;
+			cursor: pointer;
+			margin-left:50px;
+			vertical-align: middle;
+			width: 200px;
+		}
+		.time>div{
+            width: 50px;
+            height: 50px;
+            border:2px solid #FF6547;
+            border-radius:50%;
+            text-align:center;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+		}
+		.time>div:before{
+			content:"";
+			width: 15px;
+			height: 20px;
+			border-left:3px solid #FF6547;
+			border-right:3px solid #FF6547;
+			display: block;
+			position: absolute;
+			top:15px;
+			left:17.5px;
+			box-sizing: border-box;
+			transition: border .5s ease-in-out;
+		}
+ 		.time>div.active:before{
+		    content:"";
+		    width: 0px;
+		    height: 0px;
+			border-style:solid;
+			border-width:15px 0px 15px 20px;
+			border-color:transparent transparent  transparent #FF6547;
+			display: block;
+			position: absolute;
+			top:10px;
+			left:20px;
+			transition: border-left .5s ease-in-out,border-style .5s ease-in-out;
+		}
+		.time p{
+          font-size:25px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+		.content{
+            padding: 0px 20px;
+            transition: all .5s ease-in-out;
+		}
+		.content>h1{
+			font-family: arial 'Micorsoft YaHei';
+			font-size: 22px;
+		}
+		.content ul{
+			list-style:none;
+			padding: 0px;
+		}
+		.fadeout{
+            opacity: 0;
+			transition: all 0.5s ease-in-out;
+		}
+		.fadein{
+			opacity: 1;
+			transition:all 0.5s ease-in-out;
+		}
+		.content ul li{
+			border: 1px solid #d4d4d4;
+			margin-bottom: 20px;
+			line-height: 40px;
+			padding: 0px 15px;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+		.content ul li:hover{
+			background-color: rgba(216,209,209,0.48);
+			color: #1ABC9C;
+			transition: background .8s ease-in-out;
+		}
+        .content ul li label{
+        	width: 100%;
+        	display: inline-block;
+        	cursor: pointer;
+        }
+        .content button{
+        	line-height: 28px;
+        	border: 0px;
+        	cursor: pointer;
+        	border-radius: 2px;
+        	width: 70px;
+        	background-color:#1abc9c ;
+        	color:#fff;
+        	font-weight: 600;
+        	font-size: 16px;
+        	margin-right: 40px;
+        }

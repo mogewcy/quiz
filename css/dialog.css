@@ -1,0 +1,46 @@
+.dialog{
+    border-radius:5px;
+    padding-bottom: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+    background: #fff;
+    z-index: 1000;
+    font: 12px/1.5 arial,STHeiti,'Microsoft YaHei',\5b8b\4f53;
+}
+#dialog-mask{
+	width: 100%;
+	height:100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba( 73, 73, 73, 0.8 );
+    transition: opacity 1s ease-in;
+}
+.dialog-title{
+  border-bottom:1px solid black;
+  height: 35px;
+  line-height:35px;
+}
+.dialog-content{
+  padding:10px;
+  margin-bottom: 10px;
+  background-color: #f2f2f2;
+}
+.dialog button{
+  color:#fff;
+  border:0;
+  background:#2196f3;;
+  border-radius:3px;
+  line-height:20px;
+  margin-top:5px;
+  padding:3px 28px;
+  font-weight: 500;
+  cursor:pointer;
+}
+.dialog button:first-of-type{
+  margin-right: 30px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+<script type="text/javascript">
+ $(function(){
+ var my_data="前台变量";
+     my_data=escape(my_data)+"";//编码，防止汉字乱码
+ var userAnswer={
+      name:'wcy',
+      age:12
+ };
+     $.ajax({
+         url: "test.php",  
+         type: "POST",
+         data:{trans_data:userAnswer},
+         //dataType: "json",
+         error: function(){  
+             alert('Error loading XML document');  
+         },  
+         success: function(data,status){//如果调用php成功    
+         	  var a=JSON.parse(data);
+              //alert(typeof JSON.parse(data));//解码，显示汉字
+              console.log(typeof a);
+         }
+     });
+ });
+</script>
+</html>
